@@ -12,3 +12,12 @@ html, body {
     padding: 10px;
     background-color: #73A60D;
 }
+
+.component {
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 50px;
+    float: left;
+    margin: 5px;
+}
