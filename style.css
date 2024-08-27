@@ -28,3 +28,8 @@ html, body {
     background-color: slateblue;
     color: lightgray;
 }
+
+.operator {
+    background-color: lightblue;
+    color: black;
+}
