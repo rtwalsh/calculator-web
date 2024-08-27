@@ -17,6 +17,13 @@ html, body {
     background-color: indianred;
 }
 
+#display {
+    width: 164px;
+    padding: 0 5px; /* could be padding-left: 5px; padding-right: 5px; */
+    text-align: right;
+    background-color: white;
+}
+
 .component {
     height: 50px;
     border: 1px solid black;
