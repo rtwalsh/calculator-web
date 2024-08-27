@@ -12,6 +12,10 @@ function initialize() {
     document.getElementById("display").textContent = "";
 }
 
+function clearAll() {
+    document.getElementById("display").textContent = "";
+}
+
 function digitPressed(digit) {
     operand = operand + digit; // could be operand += digit;
     document.getElementById("display").textContent = operand;
