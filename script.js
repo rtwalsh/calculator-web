@@ -5,7 +5,8 @@
  *  Date:   August 27, 2024
  */
 
-let operand;
+let operand1;
+let operand2;
 let operator;
 
 function initialize() {
@@ -13,14 +14,20 @@ function initialize() {
 }
 
 function clearAll() {
-    operand = "";
+    operand1 = "";
+    operand2 = "";
     operator = "";
     display("");
 }
 
 function digitPressed(digit) {
-    operand = operand + digit; // could be operand += digit;
-    display(operand);
+    if (operator === "") {
+        operand1 = operand1 + digit; // could be operand += digit;
+        display(operand1);
+    } else {
+        operand2 = operand2 + digit;
+        display(operand2);
+    }
 }
 
 function operatorPressed(operation) {
