@@ -3,3 +3,12 @@ html, body {
     width: 100%;
     font-family: sans-serif;
 }
+
+#main {
+    width: 248px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #73A60D;
+}
