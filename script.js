@@ -5,3 +5,6 @@
  *  Date:   August 27, 2024
  */
 
+function initialize() {
+    document.getElementById("display").textContent = "";
+}
