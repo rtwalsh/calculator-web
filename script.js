@@ -8,8 +8,7 @@
 let operand;
 
 function initialize() {
-    operand = "";
-    document.getElementById("display").textContent = "";
+    clearAll();
 }
 
 function clearAll() {
