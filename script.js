@@ -13,10 +13,14 @@ function initialize() {
 
 function clearAll() {
     operand = "";
-    document.getElementById("display").textContent = "";
+    display("");
 }
 
 function digitPressed(digit) {
     operand = operand + digit; // could be operand += digit;
-    document.getElementById("display").textContent = operand;
+    display(operand);
+}
+
+function display(text) {
+    document.getElementById("display").textContent = text;
 }
