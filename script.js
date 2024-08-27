@@ -13,6 +13,7 @@ function initialize() {
 }
 
 function clearAll() {
+    operand = "";
     document.getElementById("display").textContent = "";
 }
 
