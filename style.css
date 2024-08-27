@@ -13,6 +13,10 @@ html, body {
     background-color: #73A60D;
 }
 
+#clear_button {
+    background-color: indianred;
+}
+
 .component {
     height: 50px;
     border: 1px solid black;
