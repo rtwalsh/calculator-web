@@ -21,3 +21,10 @@ html, body {
     float: left;
     margin: 5px;
 }
+
+.button {
+    width: 50px;
+    text-align: center;
+    background-color: slateblue;
+    color: lightgray;
+}
