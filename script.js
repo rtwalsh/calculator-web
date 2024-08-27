@@ -8,3 +8,7 @@
 function initialize() {
     document.getElementById("display").textContent = "";
 }
+
+function digitPressed(digit) {
+    document.getElementById("display").textContent = digit;
+}
