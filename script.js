@@ -34,6 +34,26 @@ function operatorPressed(operation) {
     operator = operation;
 }
 
+function performOperation() {
+    let op1 = parseFloat(operand1);
+    let op2 = parseFloat(operand2);
+    let result = 0.0;
+
+    if (operator === "+") {
+        result = op1 + op2;
+    } else if (operator === "-") {
+        result = op1 - op2;
+    } else if (operator === "*") {
+        // Note: The "*" above could be "x" if that
+        // is what was used for the button label
+        result = op1 * op2;
+    } else if (operation === "/") {
+        result = op1 / op2;
+    }
+
+    display(result);
+}
+
 function display(text) {
     document.getElementById("display").textContent = text;
 }
