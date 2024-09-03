@@ -31,6 +31,10 @@ function digitPressed(digit) {
 }
 
 function appendDigit(operand, digit) {
+    if ((operand === "0") && (digit === "0")) {
+        digit = "";
+    }
+
     operand += digit;
     return operand;
 }
