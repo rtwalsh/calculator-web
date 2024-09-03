@@ -22,12 +22,17 @@ function clearAll() {
 
 function digitPressed(digit) {
     if (operator === "") {
-        operand1 = operand1 + digit; // could be operand += digit;
+        operand1 = appendDigit(operand1, digit);
         display(operand1);
     } else {
-        operand2 = operand2 + digit;
+        operand2 = appendDigit(operand2, digit);
         display(operand2);
     }
+}
+
+function appendDigit(operand, digit) {
+    operand += digit;
+    return operand;
 }
 
 function operatorPressed(operation) {
