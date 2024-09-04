@@ -43,6 +43,10 @@ function appendDigit(operand, digit) {
         }
     }
 
+    if ((digit === ".") && operand.includes(".")) {
+        digit = "";
+    }
+
     operand += digit;
     return operand;
 }
