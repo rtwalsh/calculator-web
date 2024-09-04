@@ -56,8 +56,16 @@ function operatorPressed(operation) {
 }
 
 function performOperation() {
-    let op1 = parseFloat(operand1);
-    let op2 = parseFloat(operand2);
+    let op1 = 0.0;
+    if (operand1 !== "") {
+        op1 = parseFloat(operand1);
+    }
+
+    let op2 = 0.0;
+    if (operand2 !== "") {
+        op2 = parseFloat(operand2);
+    }
+    
     let result = 0.0;
     let error = "";
 
