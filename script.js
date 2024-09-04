@@ -59,6 +59,7 @@ function performOperation() {
     let op1 = parseFloat(operand1);
     let op2 = parseFloat(operand2);
     let result = 0.0;
+    let error = "";
 
     if (operator === "+") {
         result = op1 + op2;
@@ -68,11 +69,19 @@ function performOperation() {
         // Note: The "*" above could be "x" if that
         // is what was used for the button label
         result = op1 * op2;
-    } else if (operation === "/") {
-        result = op1 / op2;
+    } else if (operator === "/") {
+        if (op2 == 0) {
+            error = "ERR: DIV BY 0";
+        } else {
+            result = op1 / op2;
+        }
     }
 
-    display(result);
+    if (error === "") {
+        display(result);
+    } else {
+        display(error);
+    }
 }
 
 function display(text) {
