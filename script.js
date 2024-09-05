@@ -16,10 +16,14 @@ function initialize() {
     clearAll();
 }
 
-function clearAll() {
+function clearState() {
     operand1 = "";
     operand2 = "";
     operator = "";
+}
+
+function clearAll() {
+    clearState();
     display("");
 }
 
@@ -94,7 +98,12 @@ function performOperation() {
         let resultStr = result.toString();
         if (resultStr.length > MAX_DIGITS) {
             if (resultStr.includes(".")) {
-                result = result.toFixed(MAX_DECIMALS);
+                let decimalPoint = resultStr.indexOf(".");
+                if (decimalPoint > MAX_DIGITS - 1) {
+                    result = result.toExponential(MAX_DECIMALS);
+                } else {
+                    result = result.toFixed(MAX_DIGITS - decimalPoint - 1);
+                }
             } else {
                 result = result.toExponential();
             }
