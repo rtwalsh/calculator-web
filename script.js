@@ -91,8 +91,9 @@ function performOperation() {
     }
 
     if (error === "") {
-        if (result.toString().length > MAX_DIGITS) {
-            if (result.toString().includes(".")) {
+        let resultStr = result.toString();
+        if (resultStr.length > MAX_DIGITS) {
+            if (resultStr.includes(".")) {
                 result = result.toFixed(MAX_DECIMALS);
             } else {
                 result = result.toExponential();
