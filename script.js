@@ -5,6 +5,9 @@
  *  Date:   August 27, 2024
  */
 
+const MAX_DIGITS = 15;
+const MAX_DECIMALS = 10;
+
 let operand1;
 let operand2;
 let operator;
@@ -65,7 +68,7 @@ function performOperation() {
     if (operand2 !== "") {
         op2 = parseFloat(operand2);
     }
-    
+
     let result = 0.0;
     let error = "";
 
@@ -83,9 +86,14 @@ function performOperation() {
         } else {
             result = op1 / op2;
         }
+    } else if (operator === "") {
+        result = op1;
     }
 
     if (error === "") {
+        if (result.toString().length > MAX_DIGITS) {
+            result = result.toFixed(MAX_DECIMALS);
+        }
         display(result);
     } else {
         display(error);
