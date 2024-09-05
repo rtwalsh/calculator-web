@@ -92,7 +92,11 @@ function performOperation() {
 
     if (error === "") {
         if (result.toString().length > MAX_DIGITS) {
-            result = result.toFixed(MAX_DECIMALS);
+            if (result.toString().includes(".")) {
+                result = result.toFixed(MAX_DECIMALS);
+            } else {
+                result = result.toExponential();
+            }
         }
         display(result);
     } else {
