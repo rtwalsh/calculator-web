@@ -11,6 +11,7 @@ const MAX_DECIMALS = 10;
 let operand1;
 let operand2;
 let operator;
+let isChainedOperation;
 
 function initialize() {
     clearAll();
@@ -20,6 +21,7 @@ function clearState() {
     operand1 = "";
     operand2 = "";
     operator = "";
+    isChainedOperation = false;
 }
 
 function clearAll() {
@@ -28,6 +30,10 @@ function clearAll() {
 }
 
 function digitPressed(digit) {
+    if (isChainedOperation && (operator === "")) {
+        clearState();
+    }
+    
     if (operator === "") {
         operand1 = appendDigit(operand1, digit);
         display(operand1);
@@ -111,6 +117,7 @@ function performOperation() {
         display(result);
         clearState();
         operand1 = result;
+        isChainedOperation = true;
     } else {
         display(error);
         clearState();
