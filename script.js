@@ -109,8 +109,11 @@ function performOperation() {
             }
         }
         display(result);
+        clearState();
+        operand1 = result;
     } else {
         display(error);
+        clearState();
     }
 }
 
