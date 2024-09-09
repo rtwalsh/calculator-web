@@ -30,11 +30,10 @@ function clearAll() {
 }
 
 function digitPressed(digit) {
-    if (isChainedOperation && (operator === "")) {
-        clearState();
-    }
-    
     if (operator === "") {
+        if (isChainedOperation) {
+            clearState();
+        }
         operand1 = appendDigit(operand1, digit);
         display(operand1);
     } else {
