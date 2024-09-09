@@ -41,6 +41,10 @@ html, body {
     color: lightgray;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .operator {
     background-color: lightblue;
     color: black;
