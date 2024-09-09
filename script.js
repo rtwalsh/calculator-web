@@ -64,6 +64,9 @@ function appendDigit(operand, digit) {
 }
 
 function operatorPressed(operation) {
+    if (operand2 !== "") {
+        performOperation();
+    }
     operator = operation;
 }
 
