@@ -45,6 +45,11 @@ html, body {
     cursor: pointer;
 }
 
+.button:active {
+    transform: scale(0.98);
+    box-shadow: 4px 4px 4px rgba(128, 128, 128, 0.75);
+}
+
 .operator {
     background-color: lightblue;
     color: black;
